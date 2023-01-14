@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="60dp"
+        android:gravity="center"
+        android:stretchColumns="1"
+        >
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:fontFamily="monospace"
+                android:text="@string/app_name"
+                android:textSize="30sp"
+                />
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:fontFamily="monospace"
+                android:text="@string/tag_line"
+                android:textColor="@color/half_baked"
+                android:layout_marginBottom="20dp"
+                />
+        </TableRow>
+
+        <TableRow>
+            <EditText
+                android:id="@+id/editTextEmailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:fontFamily="monospace"
+                android:ems="10"
+                android:autofillHints="emailAddress"
+                android:hint="@string/email_login_hint"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:ems="10"
+                android:fontFamily="monospace"
+                android:autofillHints="password"
+                android:hint="@string/password_login_hint"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="monospace"
+                android:text="@string/login_button"
+                android:layout_marginHorizontal="4dp"
+                android:padding="12dp"
+                />
+        </TableRow>
+
+       <TableRow>
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_column="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+       </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/create_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:layout_column="1"
+                android:fontFamily="monospace"
+                android:text="@string/create_user"
+                android:textColor="@color/eastern_blue"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="50dp"
+                />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

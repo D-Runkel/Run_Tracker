@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RunTracker" parent="Theme.Material3.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tangerine</item>
+        <item name="colorPrimaryVariant">@color/dark_tangerine</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/eastern_blue</item>
+        <item name="colorSecondaryVariant">@color/half_baked</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar removal. -->
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

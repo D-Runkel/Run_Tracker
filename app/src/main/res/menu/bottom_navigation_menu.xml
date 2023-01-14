@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id = "@+id/bottomAppBar"
+    >
+    <item
+        android:id="@+id/settings"
+        android:fontFamily="monospace"
+        android:title="@string/settings"
+        android:contentDescription="@string/settings"
+        android:icon="@drawable/settings_fill0_wght200_grad0_opsz24"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:contentDescription="@string/home"
+        android:icon="@drawable/home_fill0_wght200_grad0_opsz24"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/data"
+        android:title="@string/data"
+        android:icon="@drawable/feed_fill0_wght200_grad0_opsz24"
+        android:contentDescription="@string/data_management"
+        app:showAsAction="always"
+        />
+</menu>
