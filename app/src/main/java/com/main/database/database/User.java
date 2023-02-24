@@ -43,11 +43,12 @@ public class User {
         runs.add(run);
     }
 
-    public User(long id, String email, String userName, String password){
+    public User(long id, String email, String userName, String password, Vector<Run> runs){
         this.id = id;
         this.email = email;
         this.userName = userName;
         this.password = password;
+        this.runs = runs;
     }
 
     public User(){

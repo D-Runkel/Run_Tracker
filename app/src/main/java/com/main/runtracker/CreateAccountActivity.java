@@ -45,6 +45,12 @@ public class CreateAccountActivity extends AppCompatActivity {
                     Context ctx = getApplicationContext();
                     DataBase db = DataBase.getInstance(ctx);
 
+                    //if user already has account
+                    if(db.getUserByEmail(email_text).getUserName() != null){
+                        Toast.makeText(ctx, "You already have an account!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
                     if (db.createUser(email_text, name_text, password_text)) {
                         Toast.makeText(ctx, "Account created!", Toast.LENGTH_SHORT).show();
                     }

@@ -1,6 +1,7 @@
 package com.main.database.database;
 
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 
 public class Run {
 
@@ -13,11 +14,11 @@ public class Run {
 
     public Run(long id, long userID, float miles, float km, Duration runTime, LocalDate runDate){
         this.id = id;
+        this.userID = userID;
         this.miles=miles;
         this.km=km;
         this.runTime=runTime;
         this.runDate=runDate;
-
     }
 
     public Run(){
@@ -27,6 +28,10 @@ public class Run {
         km = 0;
         runTime = null;
         runDate = null;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public long getUserID() {
@@ -65,5 +70,12 @@ public class Run {
 
     public void setRunDate(LocalDate runDate) {
         this.runDate = runDate;
+    }
+
+    public String humanReadableFormatTime() {
+        return runTime.toString()
+                .substring(2)
+                .replaceAll("(\\d[HMS])(?!$)", "$1 ")
+                .toLowerCase();
     }
 }

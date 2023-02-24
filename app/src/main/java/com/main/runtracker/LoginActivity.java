@@ -23,6 +23,7 @@ import com.main.database.database.User;
 
 public class LoginActivity extends AppCompatActivity {
 
+    LoginActivity loginActivity = this;
     EditText email, pass;
     Button loginButton;
 
@@ -91,6 +92,8 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+
     private boolean validateFields() {
 
         boolean isValid = true;
@@ -115,8 +118,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void openDashboard(User user){
+
         Intent i = new Intent(this, Dashboard.class);
-        i.putExtra("user", user.getEmail());
+        String login_email = email.getText().toString();
+        i.putExtra("email", login_email);
         startActivity(i);
         finish();
     }

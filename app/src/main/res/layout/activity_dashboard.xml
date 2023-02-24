@@ -7,20 +7,25 @@
     tools:context=".Dashboard">
 
     <!-- Note: A RecyclerView can also be used -->
+
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/eastern_blue"
+        app:backgroundTint="@color/eastern_blue"
         android:contentDescription="@string/add_a_run"
-        app:srcCompat="@drawable/directions_run_fill0_wght200_grad0_opsz24"
-        android:layout_marginHorizontal="60dp"
+        app:icon="@drawable/directions_run_fill0_wght200_grad0_opsz24"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="110dp"
+        android:text="@string/add_run"
+        app:borderWidth="0dp"
         app:layout_anchor="@id/bottomAppBar"
         app:layout_anchorGravity="right"
         />
